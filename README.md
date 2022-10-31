@@ -30,8 +30,3 @@ mosquitto_sub -d -t testTopic
 ## To publish
 
 mosquitto_pub -d -t testTopic -m "Hello world!"
-
-
-
-To enable credentials
-
