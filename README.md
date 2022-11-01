@@ -30,3 +30,9 @@ mosquitto_sub -d -t testTopic
 ## To publish
 
 mosquitto_pub -d -t testTopic -m "Hello world!"
+
+## To check if Mosquitto is actually running, you can run the following command:
+
+sudo systemctl status mosquitto
+
+
