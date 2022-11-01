@@ -30,6 +30,7 @@ mosquitto_sub -d -t testTopic
 
 
 ## To publish
+
 mosquitto_pub -d -t testTopic -m "Hello world!"
 
 ## To check if Mosquitto is actually running, you can run the following command:
@@ -40,16 +41,22 @@ Note : This will give old information also ! So check the current date on the Rp
 
 
 ## The location of the mosquitto installation is /etc/mosquitto
-
+```
 pi@raspberrypi:/etc/mosquitto $ ls
-ca_certificates  certs  conf.d  mosquitto.conf  passwd
 
+ca_certificates  
+certs  
+conf.d  
+mosquitto.conf  
+passwd
 
+```
 ## To publish from command line on the Mac OS to the cloudmqtt.com platform
 This will publish to the cloud mqtt broker.
 
+```
 mosquitto_pub -d -t testTopic -m "Hello world from Mosquitto Pub!" -h m12.cloudmqtt.com -p 19757 -u <User> -P <Password>
-
+```
 
 ![image](https://user-images.githubusercontent.com/14288989/199173466-c2ad7e0e-d640-48ee-8b05-68587df053b3.png)
 
