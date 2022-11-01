@@ -18,25 +18,29 @@ sudo nano /etc/mosquitto/mosquitto.conf
 
 
 ## To start as a daemon
-
+```
 mosquitto -d
+```
 
 ## To restart
+```
 sudo systemctl restart mosquitto
-
+```
 
 ## To subscribe 
+```
 mosquitto_sub -d -t testTopic
-
+```
 
 ## To publish
-
+```
 mosquitto_pub -d -t testTopic -m "Hello world!"
+```
 
 ## To check if Mosquitto is actually running, you can run the following command:
-
+```
 sudo systemctl status mosquitto
-
+```
 Note : This will give old information also ! So check the current date on the Rpi and also the last date of the message in the above to know if it's really a problem.
 
 
@@ -51,7 +55,8 @@ mosquitto.conf
 passwd
 
 ```
-## To publish from command line on the Mac OS to the cloudmqtt.com platform
+## To publish from MacOS command line to the cloudmqtt.com platform
+
 This will publish to the cloud mqtt broker.
 
 ```
