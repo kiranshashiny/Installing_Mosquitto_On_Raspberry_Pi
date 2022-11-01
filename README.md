@@ -66,3 +66,34 @@ mosquitto_pub -d -t testTopic -m "Hello world from Mosquitto Pub!" -h m12.cloudm
 ![image](https://user-images.githubusercontent.com/14288989/199173466-c2ad7e0e-d640-48ee-8b05-68587df053b3.png)
 
 
+## Mosquitto Broker Enable Remote Access (Authentication: user and password)
+```
+sudo mosquitto_passwd -c /etc/mosquitto/passwd YOUR_USERNAME
+
+e.g:
+
+sudo mosquitto_passwd -c /etc/mosquitto/passwd sara
+```
+
+
+## To allow authentication with the username and password we’ve defined.
+Add the following line at the top of the file (make sure it is at the top of the file, otherwise it won’t work):
+
+```
+sudo nano /etc/mosquitto/mosquitto.conf
+
+
+per_listener_settings true
+```
+
+Add the following three lines to allow connection for authenticated users and tell Mosquitto where the username/password file is located.
+```
+allow_anonymous false
+listener 1883
+password_file /etc/mosquitto/passwd
+```
+
+## The default port that is used by mosquitto on Rpi.
+```
+1883
+```
