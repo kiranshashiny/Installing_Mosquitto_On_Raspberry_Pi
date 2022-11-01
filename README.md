@@ -98,3 +98,19 @@ password_file /etc/mosquitto/passwd
 1883
 ```
 
+## Arduino sketch (ESP8266) to publish data to the mosquitto MQTT broker is attached.
+
+This sends a single string from the ESP8266 to the mosquitto broker with the credentials.
+The user name and the password for the mosquitto broker is "sara and "sara
+
+We still have to connect it to local WiFi router before connecting to the mosquitto running on the Rpi.
+
+The mosquitto is subscribed to "outTopic" and the mosquitto on Rpi will use this command to receive the data from the ESP.
+```
+mosquitto_sub -d -t outTopic
+
+```
+
+Here I am having the ESP 8266 send a single "0" to the broker, and this snapshot is from the RPI.
+
+![image](https://user-images.githubusercontent.com/14288989/199235213-8d801f85-2b78-44ab-9a2b-3ba2bd41116e.png)
