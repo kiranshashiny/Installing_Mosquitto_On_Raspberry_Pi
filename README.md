@@ -55,7 +55,7 @@ mosquitto.conf
 passwd
 
 ```
-## To publish from MacOS command line to the cloudmqtt.com platform
+## To publish from Raspberry Pi (where the Mosquitto client is installed) command line to the cloudmqtt.com platform
 
 This will publish to the cloud mqtt broker.
 
